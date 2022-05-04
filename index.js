@@ -12,6 +12,11 @@ var mostrar = await usuario.findAll();
   res.json(mostrar);
 });
 
+app.get("/:id", async function(req, res) {
+ const id = await usuario.findByPk(req.params.id);
+ res.json(id)
+});
+
 app.post("/", async function(req, res){
   var mostrar = await usuario.create(req.body);
   res.json(mostrar);
@@ -29,4 +34,4 @@ app.delete("/", async function(req, res){
 app.listen(3000, function(){
   console.log("servidor meteu essa mane");
 });
-                   
+        
