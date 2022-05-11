@@ -1,2 +1,2 @@
 # ptasSQL
-ORM 
+Sequelize - ORM
